@@ -1,0 +1,1 @@
+Hello,My name is Damir,i am from Balkash, it is small town in Karagandy region.I study at Suleyman Demirel University, 2 course of Information Systems.I ended school in Balkash Liceum #15 named by Alikhan Bukeikhanov.From 11'th class i set a goal to study computer science and be a good programmer in the future that help to KZ.
