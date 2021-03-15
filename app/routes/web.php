@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,12 +16,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
 Route::get('/Portfolio', function () {
     return view('Portfolio');
 });
 
 Route::get('/user', function () {
     return view('user');
+});
+});
+Route::get('post/create',function(){
+	DB::table('post')->insert([
+		'title'=>'My lab4',
+		'body' =>'It is my lab4 from laravel, I use migration and model'
+	]);
+});
+Route::get('post', function(){
+	$posts=Post::find(1);
+	return $posts->title;
 });
