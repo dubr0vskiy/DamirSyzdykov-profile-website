@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use 
+use App\Models\Post;
 class BlogController extends Controller
 {
     public function index(){
-        $clients=Client::all();
+        $post=Post::all();
 
-        return view('client.index')->with(['clients'=>$clients]);
+        return view('blog.index')->with(['post'=>$post]);
     }
 }
