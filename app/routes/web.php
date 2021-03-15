@@ -25,10 +25,14 @@ Route::get('/user', function () {
     return view('user');
 });
 });
-Route::get('post/create',function(){
+Route::get('post/add',function(){
 	DB::table('post')->insert([
 		'title'=>'My lab4',
 		'body' =>'It is my lab4 from laravel, I use migration and model'
 	]);
 });
 Route::get('post', [BlogController::class, 'index']);
+Route::get('post/create', function(){
+	return view('blog.create');
+});
+Route::post('post/create', [BlogController::class,'store'])->name('add-post');
